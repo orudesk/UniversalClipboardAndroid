@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         var baseUrl = "copy/$id"
         var firebaseUrl = "$baseUrl/value";
-        var websiteUrl = "https://oruhelp.com/$baseUrl"
+        var websiteUrl = "https://orudesk.com/$baseUrl"
 
         val copyButton = findViewById<Button>(R.id.btn_copy)
         val uploadButton = findViewById<Button>(R.id.btn_upload)
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
             baseUrl = "copy/$id"
             firebaseUrl = "$baseUrl/value";
-            websiteUrl = "https://oruhelp.com/$baseUrl"
+            websiteUrl = "https://orudesk.com/$baseUrl"
 
             hideWatchToast = true
             val database = Firebase.database
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
 
             baseUrl = "copy/$id"
             firebaseUrl = "$baseUrl/value";
-            websiteUrl = "https://oruhelp.com/$baseUrl"
+            websiteUrl = "https://orudesk.com/$baseUrl"
 
             val messageListener = object : ValueEventListener {
 
@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
 
             baseUrl = "copy/$id"
             firebaseUrl = "$baseUrl/value";
-            websiteUrl = "https://oruhelp.com/$baseUrl"
+            websiteUrl = "https://orudesk.com/$baseUrl"
 
             hideWatchToast = true;
             val database = Firebase.database
