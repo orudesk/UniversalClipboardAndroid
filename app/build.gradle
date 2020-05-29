@@ -9,15 +9,32 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
-    defaultConfig {
-        applicationId "com.orudesk.universalclipboard"
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+
+        versionProps.load(new FileInputStream(versionPropsFile))
+
+        def code = versionProps['VERSION_CODE'].toInteger() + 1
+
+        versionProps['VERSION_CODE']=code.toString()
+        versionProps.store(versionPropsFile.newWriter(), null)
+
+        defaultConfig {
+            applicationId "com.orudesk.universalclipboard"
+            versionCode code
+            versionName "1.1"
+            minSdkVersion 21
+            targetSdkVersion 29
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
     }
+    else {
+        throw new GradleException("Could not read version.properties!")
+    }
+
     signingConfigs {
         release {
             if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
@@ -31,7 +48,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
