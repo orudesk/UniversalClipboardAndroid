@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "572572374733",
+    "firebase_url": "https://oru-desk.firebaseio.com",
+    "project_id": "oru-desk",
+    "storage_bucket": "oru-desk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572572374733:android:4ce74d9dc7e92e88f47b84",
+        "android_client_info": {
+          "package_name": "com.orudesk.universalclipboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572572374733-vkv4tq58j1dgupn5jd2nqfjuk7dtu8pa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMBrbEnu7wBD9kUD4nssFYQC8TuhTXTw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572572374733-vkv4tq58j1dgupn5jd2nqfjuk7dtu8pa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
