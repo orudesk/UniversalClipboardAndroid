@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         var baseUrl = "copy/$id"
         var firebaseUrl = "$baseUrl/value";
-        var websiteUrl = "https://orudesk.com/$baseUrl"
+        var websiteUrl = "https://oru-desk.web.app/$baseUrl"
 
         val copyButton = findViewById<Button>(R.id.btn_copy)
         val uploadButton = findViewById<Button>(R.id.btn_upload)
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
             baseUrl = "copy/$id"
             firebaseUrl = "$baseUrl/value";
-            websiteUrl = "https://orudesk.com/$baseUrl"
+            websiteUrl = "https://oru-desk.web.app/$baseUrl"
 
             hideWatchToast = true
             val database = Firebase.database
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
 
             baseUrl = "copy/$id"
             firebaseUrl = "$baseUrl/value";
-            websiteUrl = "https://orudesk.com/$baseUrl"
+            websiteUrl = "https://oru-desk.web.app/$baseUrl"
 
             val messageListener = object : ValueEventListener {
 
@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
 
             baseUrl = "copy/$id"
             firebaseUrl = "$baseUrl/value";
-            websiteUrl = "https://orudesk.com/$baseUrl"
+            websiteUrl = "https://oru-desk.web.app/$baseUrl"
 
             hideWatchToast = true;
             val database = Firebase.database
@@ -208,7 +208,7 @@ class MainActivity : AppCompatActivity() {
                     } else {
 
                         id = mDialogView.txt_username.text.toString()
-                        txt_url.setText("http://orudesk.com/copy/$id")
+                        txt_url.setText("http://oru-desk.web.app/copy/$id")
                         mDialogView.txt_username.setText("")
 
                         try {
